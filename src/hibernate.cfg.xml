@@ -8,8 +8,10 @@
   <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/protein_tracker</property>
   <property name="hibernate.connection.username">appuser</property>
   <property name="hibernate.default_schema">protein_tracker</property>
-  <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+  <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
   <property name="hibernate.show_sql">true</property>
+  <property name="hibernate.connection.autocommit">false</property>
+  <property name="hibernate.hbm2ddl.auto">create</property>
   <mapping resource="com/simpleprogram/User.hbm.xml"/>
  </session-factory>
 </hibernate-configuration>

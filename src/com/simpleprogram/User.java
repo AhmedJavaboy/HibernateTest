@@ -1,33 +1,44 @@
 package com.simpleprogram;
 
+import java.util.HashSet;
+import java.util.Set;
+
+
 public class User {
 	private int id;
-	private int total;
-	private int goal;
 	private String name;
+	private ProteinData proteinData=new ProteinData();
+	private Set<UserHistory> history= new HashSet<UserHistory>();
 	
-	public int getTotal() {
-		return total;
-	}
-	public void setTotal(int total) {
-		this.total = total;
-	}
 	public int getId() {
 		return id;
 	}
+
 	public void setId(int id) {
 		this.id = id;
 	}
-	public int getGoal() {
-		return goal;
-	}
-	public void setGoal(int goal) {
-		this.goal = goal;
-	}
+
 	public String getName() {
 		return name;
 	}
+
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public ProteinData getProteinData() {
+		return proteinData;
+	}
+
+	public void setProteinData(ProteinData proteinData) {
+		this.proteinData = proteinData;
+	}
+
+	public Set<UserHistory> getHistory() {
+		return history;
+	}
+
+	public void setHistory(Set<UserHistory> history) {
+		this.history = history;
 	}
 }
