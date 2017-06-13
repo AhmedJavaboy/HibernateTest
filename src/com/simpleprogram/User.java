@@ -2,13 +2,14 @@ package com.simpleprogram;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 
 
 public class User {
 	private int id;
 	private String name;
 	private ProteinData proteinData=new ProteinData();
-	private Collection<UserHistory> history= new ArrayList<UserHistory>();
+	private List<UserHistory> history= new ArrayList<UserHistory>();
 	
 	public int getId() {
 		return id;
@@ -34,11 +35,17 @@ public class User {
 		this.proteinData = proteinData;
 	}
 
-	public Collection<UserHistory> getHistory() {
+	public List<UserHistory> getHistory() {
 		return history;
 	}
 
-	public void setHistory(Collection<UserHistory> history) {
+	public void setHistory(List<UserHistory> history) {
 		this.history = history;
+	}
+	
+	public void addHistory(UserHistory item){
+		item.setUser(this);
+		history.add(item);
+		
 	}
 }

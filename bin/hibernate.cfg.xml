@@ -13,5 +13,6 @@
   <property name="hibernate.connection.autocommit">false</property>
   <property name="hibernate.hbm2ddl.auto">create</property>
   <mapping resource="com/simpleprogram/User.hbm.xml"/>
+  <mapping resource="com/simpleprogram/UserHistory.hbm.xml"/>
  </session-factory>
 </hibernate-configuration>
